@@ -4,8 +4,8 @@
 #define RGBLIGHT_COLOR_LAYER_0 RGB_CYAN     // MAC
 #define RGBLIGHT_COLOR_LAYER_1 RGB_GOLD     // LIX
 #define RGBLIGHT_COLOR_LAYER_2 RGB_MAGENTA  // WIN
-#define RGBLIGHT_COLOR_LAYER_3 RGB_BLUE     // SYMB
-#define RGBLIGHT_COLOR_LAYER_4 RGB_GREEN    // NUMB
+#define RGBLIGHT_COLOR_LAYER_3 RGB_GREEN    // SYMB
+#define RGBLIGHT_COLOR_LAYER_4 RGB_BLUE     // NUMB
 #define RGBLIGHT_COLOR_LAYER_5 RGB_RED      // ARROW
 
 enum layers {
@@ -290,32 +290,32 @@ layer_state_t layer_state_set_user(layer_state_t state) {
         break;
       case LIX:
         ergodox_right_led_1_on();
+        ergodox_right_led_2_on();
         #ifdef RGBLIGHT_COLOR_LAYER_1
           rgblight_setrgb(RGBLIGHT_COLOR_LAYER_1);
         #endif
         break;
       case WIN:
         ergodox_right_led_2_on();
+        ergodox_right_led_3_on();
         #ifdef RGBLIGHT_COLOR_LAYER_2
           rgblight_setrgb(RGBLIGHT_COLOR_LAYER_2);
         #endif
         break;
       case SYMB:
-        ergodox_right_led_1_on();
         ergodox_right_led_2_on();
         #ifdef RGBLIGHT_COLOR_LAYER_3
           rgblight_setrgb(RGBLIGHT_COLOR_LAYER_3);
         #endif
         break;
       case NUMB:
-        ergodox_right_led_2_on();
         ergodox_right_led_3_on();
         #ifdef RGBLIGHT_COLOR_LAYER_4
           rgblight_setrgb(RGBLIGHT_COLOR_LAYER_4);
         #endif
         break;
       case ARROW:
-        ergodox_right_led_3_on();
+        ergodox_right_led_1_on();
         #ifdef RGBLIGHT_COLOR_LAYER_5
           rgblight_setrgb(RGBLIGHT_COLOR_LAYER_5);
         #endif
